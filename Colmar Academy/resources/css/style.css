@@ -1,0 +1,428 @@
+/*global*/
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  font-family: 'Encode Sans', sans-serif;
+  line-height: 120%;
+
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: rgba(94, 16, 12, 1);
+}
+
+h3 {
+  font-size: 1.33rem;
+  font-weight: bolder;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+nav li {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.desktop a:hover, .leftcontainer h2:hover {
+  color: #5e100c;
+  text-shadow: 3px 3px 2px #d1d1d1;
+  transition: all 0.5s;
+}
+
+video, img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/*color*/
+
+
+/*flex rules*/
+.centerflex, .textflex, .bigflex, .majorflex {
+  display: flex;
+}
+
+.centerflex {
+  align-items: center;
+}
+
+.textflex {
+  flex-flow: column;
+  justify-content: center;
+}
+
+.bigflex {
+  justify-content: flex-start;
+}
+
+.majorflex {
+  flex-flow: column;
+  justify-content: flex-start;
+}
+
+.headerflex {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*header*/
+header {
+  height: 4rem;
+  padding: 0 1.5rem;
+  align-items: center;
+}
+
+
+header nav a:hover {
+  color: #5e100c;
+  text-shadow: 3px 3px 2px #d1d1d1;
+  transition: all 0.5s;
+}
+
+header .bold {
+  color: #5e100c;
+}
+
+@media only screen and (max-width: 720px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile  {
+    display: block;
+  }
+
+  header .mobile {
+    width: 100%;
+  }
+
+  header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+/*reused divs*/
+
+.leftcontainer {
+  width: 60%;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+}
+
+.leftcontainer h2 {
+  font-weight: 600;
+}
+
+.rightcontainer {
+  width: 40%;
+  overflow: hidden;
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column;
+}
+
+/*.leftcontainer img, .image img{
+  height: auto;
+  max-width: 100%;
+  display: block;
+}*/
+
+
+.rightcontainer .image {
+  margin: 1rem;
+  width: 35%
+}
+
+.desktop .rightcontainer .bigflex:hover {
+  background-color: rgba(94, 16, 12, 0.1);
+  border-radius: 1rem;
+  transition: background-color 0.5s;
+}
+
+.rightcontainer .textflex {
+  width: 65%;
+}
+
+
+.rightcontainer .textflex p {
+  margin: 0.5rem 0;
+}
+
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  padding: 2rem;
+}
+
+/*main*/
+.main {
+  background-color: rgba(94, 16, 12, 0.2);
+  width: 100%;
+}
+
+.main .leftcontainer {
+  max-height: 100%;
+}
+
+.main .leftcontainer img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.main .textflex {
+  width: 35%;
+  margin-right: 5%;
+}
+
+.main .textflex h1 {
+  padding: 1rem 0;
+}
+
+.main .button {
+  margin: 2rem 0;
+  text-align: center;
+  background-color: #5e100c;
+  padding: 0.5rem 0;
+}
+
+.main .button a {
+  color: white;
+}
+
+.main .button:hover {
+  background-color: #043c96;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 720px) {
+  .main {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .main .leftcontainer {
+    width: 100%;
+    padding: 0;
+  }
+
+  .main .textflex {
+    width: auto;
+    margin:0;
+    padding: 0 1rem;
+  }
+
+  .main .textflex h1 {
+    padding: 2rem 0;
+  }
+
+  .main .button {
+    margin-top: 1.5rem;
+  }
+}
+
+/*banner*/
+.banner {
+  width: 100%;
+}
+
+.banner .majorflex, .thesis .majorflex {
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.banner .leftcontainer .majorflex h2 {
+  color: rgba(94, 16, 12, 1);
+}
+
+.banner .leftcontainer .majorflex p {
+  margin: 1.5rem 0;
+}
+
+.banner .rightcontainer .bigflex {
+  border: 2px rgba(94, 16, 12, 0.1) solid;
+}
+
+.banner .rightcontainer .bigflex:hover {
+  border: 2px transparent solid;
+  border-radius: 1rem;
+  background-color: rgba(94, 16, 12, 0.1);
+  transition: background-color 0.5s;
+}
+
+@media only screen and (max-width: 720px) {
+  .banner .rightcontainer {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .banner .rightcontainer .bigflex {
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    border: none;
+  }
+
+  .banner .rightcontainer .bigflex:hover {
+    border: none;
+    background-color: white;
+  }
+
+  .banner .rightcontainer .bigflex:last-child {
+    margin-bottom: 1rem;
+  }
+
+  .banner .mobile, .banner .bigflex .textflex {
+    width: 100%;
+  }
+
+  .banner .bigflex .textflex {
+    padding-top: 2rem;
+  }
+
+  .banner .mobile img {
+    margin: auto;
+  }
+}
+
+/*major*/
+.major {
+  padding: 2rem 4.5rem;
+  text-align: center;
+}
+
+.majors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.major .majorflex {
+  width: 30%;
+  margin-bottom: 1rem;
+}
+
+.majorflex .image img {
+  height: auto;
+}
+
+.major .textflex {
+  padding: 1rem;
+  text-align: left;
+}
+
+.majorflex .textflex p {
+  margin-top: 0.5rem;
+}
+
+.major .majorflex:hover {
+  background-color: rgba(94, 16, 12, 0.1);
+  transition: all 0.5s;
+}
+
+.major .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  .major .desktop {
+    display: none;
+  }
+
+  .major {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+
+  .major .title {
+    padding: 0;
+  }
+
+  .major .title h1 {
+    padding: 0;
+  }
+
+  .major .mobile {
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  .mobile .text {
+    background-color: rgba(94, 16, 12, 1);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile .text h2 {
+    color: white;
+  }
+
+  .mobile .text:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+/*thesis*/
+.thesis .rightcontainer {
+  padding-top: 1rem;
+}
+
+
+.thesis .majorflex p {
+  margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .thesis .mobile {
+    margin-bottom: 1.5rem;
+  }
+
+  .thesis h1 {
+    padding-bottom: 1rem;
+  }
+}
+
+/*footer*/
+footer {
+  height: 5rem;
+  padding: 1rem 1.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  footer {
+    padding: 1rem;
+    height: auto;
+  }
+}
